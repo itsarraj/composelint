@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  web:
+    image: nginx:1.25.3
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8080:80"
+  db:
+    image: postgres:16.2
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:5432:5432"
+  worker:
+    image: myregistry.internal/queue-worker:2.4.1
+    restart: on-failure
+    ports:
+      - "9000"

@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+    network_mode: host
+    privileged: true
+  db:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
