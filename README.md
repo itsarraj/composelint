@@ -8,6 +8,12 @@ There's no dominant standalone tool for this the way `hadolint` covers
 Dockerfiles — most of it lives as tribal knowledge or a checklist in
 someone's head. This is a static binary that checks it automatically.
 
+## Installation
+
+```sh
+cargo install --path .
+```
+
 ## Usage
 
 ```bash
